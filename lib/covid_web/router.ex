@@ -16,7 +16,9 @@ defmodule CovidWeb.Router do
   scope "/", CovidWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", VirusController, :index
+    get "/viruses", VirusController, :index
+    get "/viruses/:code", VirusController, :show
   end
 
   # Other scopes may use custom stacks.

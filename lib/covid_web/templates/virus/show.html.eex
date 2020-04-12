@@ -1,0 +1,2 @@
+ <h1>Show Virus</h1>
+ <b><%= @virus.name %></b>
