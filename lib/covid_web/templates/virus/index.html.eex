@@ -1,9 +1,11 @@
 <h1>Listing Viruses</h1>
+<%= link "New", to: Routes.virus_path(@conn, :new) %>
 <table>
   <%= for virus <- @viruses do %>
   <tr>
     <td><b><%= upper_case_name(virus) %></b> (<%= virus.code %>)</td>
     <td><%= link "View", to: Routes.virus_path(@conn, :show, virus.code) %></td>
+    <td><%= link "edit", to: Routes.virus_path(@conn, :edit, virus.code) %></td>
   </tr>
   <% end %>
 </table>

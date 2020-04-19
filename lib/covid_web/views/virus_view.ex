@@ -9,4 +9,9 @@ defmodule CovidWeb.VirusView do
     |> String.replace(" ", "")
     |> String.upcase
   end
+
+  def csrf_token(conn) do
+    Plug.Conn.get_session(conn, :csrf_token)
+  end
+
 end
